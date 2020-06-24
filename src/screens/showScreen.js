@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Context } from  '../context/BlogContext'
 
-const showScreen = ({ navigation }) => {
+const ShowScreen = ({ navigation }) => {
     const { state } = useContext(Context)
     const blogPost = state.find(blogPost => blogPost.id === navigation.getParam('id'))
   return (
@@ -12,4 +12,4 @@ const showScreen = ({ navigation }) => {
   );
 };
 const styles = StyleSheet.create({});
-export default showScreen;
+export default ShowScreen;
